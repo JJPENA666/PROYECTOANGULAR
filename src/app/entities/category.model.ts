@@ -1,5 +1,5 @@
-export interface ICategory{
-    title: string;
+export interface CategoryModel{
+    name: string;
     description: string;
-    id: number;
+
 }
