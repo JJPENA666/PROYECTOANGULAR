@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthRoutingModule } from './auth/auth-routing.module';
 import { LoginComponent } from './auth/login/login.component';
 import {RegisterComponent} from './auth/register/register.component';
-import { NotFoundComponent } from './not-found/not-found.component';
+import { NoFoundComponent } from './noFoundPages/no-found/no-found.component';
 import { CategoryComponent } from './pages/category/category.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { PagesRoutingModule } from './pages/pages-routing.module';
@@ -16,7 +16,7 @@ const routes: Routes = [
   //{path: 'register', component:RegisterComponent},
 
   {path: '', redirectTo:'/dashboard/',pathMatch:'full'},
-  {path: '**', component:NotFoundComponent},
+  {path: '**', component:NoFoundComponent},
 
 ];
 
