@@ -29,7 +29,9 @@ export class ProductComponent implements OnInit {
   getProducts():void{
     const url ="https://api.escuelajs.co/api/v1/products";
     this.productHttpService.getAll().subscribe
-    (response => {console.log(response);
+    (response => {
+      this.products = response;
+      console.log(response);
     });
   }
 
