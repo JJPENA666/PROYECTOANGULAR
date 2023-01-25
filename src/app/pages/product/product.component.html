@@ -1,5 +1,53 @@
-<p>product works!</p>
 <h1> HEY CODERS DE ♥!!!</h1>
-
-<hr><hr>
 <h5> JONATHAN PEÑA </h5>
+
+<div class="container">
+    <div>
+        <div class="mb-3">
+            <label for="title" class="form-label">Nombre del producto:</label>
+            <input type="text" name="" id="title" class="form-control" [value]="selectedProduct.title">
+        </div>
+    </div>
+    <div>
+        <div class="mb-3">
+            <label for="price" class="form-label">Precio del producto:</label>
+            <input type="text" name="" id="price" class="form-control" [value]="selectedProduct.price">
+        </div>
+    </div>
+    <div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Descripcion del producto:</label>
+            <textarea name="" id="description" class="form-control" cols="30" rows="3">{{selectedProduct.title}}</textarea>
+        </div>
+    </div>
+    <div>
+      <button (click)="updateProduct">Guardar</button>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-primary">
+            <thead>
+                <tr>
+                    <th scope="col">Product</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Delete</th>
+                    <th scope="col">Edit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="" *ngFor="let product of products">
+                    <td>{{product.title}}</td>
+                    <td>{{product.price}}</td>
+                    <td>{{product.description}}</td>
+                    <td>{{product.category}}</td>
+                    <td><img src="{{product.images}}" alt="" width="160px" height="160px"></td>
+                    <td><a href=""(click)="deleteProduct(product.id)">Delete</a></td>
+                    <td><a href=""(click)="editProduct(product)">Edit</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
